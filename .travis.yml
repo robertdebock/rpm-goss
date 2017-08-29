@@ -1,20 +1,22 @@
-#sudo: required
+sudo: required
 
 #language: sh
 
-#services:
-#  - docker
+services:
+  - docker
 
-#env:
-#  global:
-#    - PACKAGE="apache-tomcat"
-#    - VERSION="7.0.79"
-#    - RELEASE="1.el7"
-#    - DIR="/data"
-#    - CONTAINER="centos:7"
-    
+env:
+  global:
+    - IMAGE="robertdebock/docker-rpmbuild"
+
+before_install:
+- docker pull ${IMAGE}
+
 install:
-- docker run -v $(pwd):/build robertdebock/docker-rpmbuild
+- docker run -v $(pwd):/build ${IMAGE}
+
+script:
+- find ./ -name '*.rpm'
 
 #deploy:
 #  provider: s3
