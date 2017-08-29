@@ -1,0 +1,31 @@
+#sudo: required
+
+#language: sh
+
+#services:
+#  - docker
+
+#env:
+#  global:
+#    - PACKAGE="apache-tomcat"
+#    - VERSION="7.0.79"
+#    - RELEASE="1.el7"
+#    - DIR="/data"
+#    - CONTAINER="centos:7"
+    
+install:
+- docker run -v $(pwd):/build robertdebock/docker-rpmbuild
+
+#deploy:
+#  provider: s3
+#  access_key_id: ${S3KEY}
+#  secret_access_key: ${S3SECRET}
+#  bucket: "apache-tomcat7.el7"
+#  region: "eu-west-1"
+#  skip_cleanup: true
+#  local_dir: /data/repository
+#  on:
+#    branch: master
+
+notifications:
+  email: false
