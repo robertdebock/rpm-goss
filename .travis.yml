@@ -22,7 +22,7 @@ deploy:
   - provider: s3
     access_key_id: ${S3KEY}
     secret_access_key: ${S3SECRET}
-    bucket: "rpms"
+    bucket: "roberts-rpms"
     region: "eu-west-1"
     skip_cleanup: true
     on:
@@ -30,7 +30,7 @@ deploy:
   - provider: s3
     access_key_id: ${S3KEY}
     secret_access_key: ${S3SECRET}
-    bucket: "rpms"
+    bucket: "roberts-rpms"
     region: "eu-west-1"
     skip_cleanup: true
     on:
