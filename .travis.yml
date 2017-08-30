@@ -25,7 +25,7 @@ deploy:
     bucket: "rpms"
     region: "eu-west-1"
     skip_cleanup: true
-    local_dir: ./RPMS
+    local_dir: ./RPMS/x86_64
     on:
       branch: master
   - provider: s3
