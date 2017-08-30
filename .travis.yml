@@ -25,14 +25,7 @@ deploy:
     bucket: "roberts-rpms"
     region: "eu-west-1"
     skip_cleanup: true
-    on:
-      branch: master
-  - provider: s3
-    access_key_id: ${S3KEY}
-    secret_access_key: ${S3SECRET}
-    bucket: "roberts-rpms"
-    region: "eu-west-1"
-    skip_cleanup: true
+    local_dir: RPMS/x86_64
     on:
       branch: master
 
