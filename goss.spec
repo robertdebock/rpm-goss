@@ -1,5 +1,5 @@
 Name: goss
-Version: 0.3.4
+Version: 0.3.5
 Release: 1
 Summary: Quick and Easy server testing/validation
 Group: Development/Testing
@@ -35,3 +35,5 @@ rm -rf %{buildroot}
 %changelog
 * Tue Aug 29 2017 - robert (at) meinit.nl
 - Initial release.
+* Fri Sep 15 2017 - robert (at) meinit.nl
+- Version bump 0.3.4 -> 0.3.5
