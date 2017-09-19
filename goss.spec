@@ -29,8 +29,8 @@ sh install.sh
 rm -rf %{buildroot}
 
 %files
-/usr/local/bin/goss
-/usr/local/bin/dgoss
+/usr/bin/goss
+/usr/bin/dgoss
 
 %changelog
 * Tue Aug 29 2017 - robert (at) meinit.nl
